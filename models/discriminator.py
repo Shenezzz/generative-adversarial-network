@@ -30,5 +30,5 @@ class Discriminator(nn.Module):
         h = self.conv(x)
         h = h.view(h.size(0), -1)
         logit = self.fc(h)
-        prob = torch.sigmoid(logit)  # squash to (0,1) -- "probability this is real"
-        return prob
+        # prob = torch.sigmoid(logit)  # squash to (0,1) -- "probability this is real"
+        return logit

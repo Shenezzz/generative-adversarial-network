@@ -23,6 +23,4 @@ def get_mnist_data(batch_size=128):
         train_dataset, batch_size=batch_size, shuffle=True, drop_last=True
     )
     
-    print("Data ready")
-    
     return train_loader
