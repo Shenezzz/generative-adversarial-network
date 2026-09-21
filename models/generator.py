@@ -1,6 +1,13 @@
 import torch
 import torch.nn as nn
 
+# The generator G(x)
+# Takes a random noise vector z (NOISE_DIM numbers) and transforms
+# it, step by step, into a full 28x28 image. This is essentially the
+# DECODER half of an autoencoder — same
+# idea of "expand a small vector into a full image" — the difference
+# is what TRAINS it: no reconstruction target here, only the
+# discriminator's feedback.
 class Generator(nn.Module):
     def __init__(self,noise_dim):
         super().__init__()
