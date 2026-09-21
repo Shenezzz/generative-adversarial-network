@@ -1,6 +1,3 @@
-import torch
-import torch.nn
-
 import torchvision
 import torchvision.transforms as transforms
 from torch.utils.data import DataLoader
@@ -28,7 +25,4 @@ def get_mnist_data(batch_size=128):
     
     print("Data ready")
     
-    # return train_loader
-
-if __name__ == "__main__":
-    get_mnist_data()
+    return train_loader
